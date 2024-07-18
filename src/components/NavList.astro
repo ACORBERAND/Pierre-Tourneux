@@ -1,0 +1,83 @@
+---
+
+---
+
+<ul>
+    <li>
+        <a href="/">Accueil</a>
+    </li>
+    <li>
+        <a href="/projects">Projets</a>
+    </li>
+    <li>
+        <a href="/contact">Contact</a>
+    </li>
+</ul>
+
+<!--descktop vers mobile -->
+<style lang="scss">
+    $shadow: #030305;
+    ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        gap: 2rem;
+        margin: 2rem 2rem;
+        padding: 0;
+        @media (max-width: 659px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        li {
+            position: relative;
+            text-decoration: none;
+            color: $shadow;
+            transition: 0.3s;
+            &:hover{
+                transition: 0.3s;
+                transform: translateY(-10px);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -2px; 
+                width: 0;  
+                height: 2px; 
+                background-color: black; 
+                transition: width 0.3s; 
+            }
+            &:hover::after {
+                width: 100%;
+            }
+            a {
+                color: $shadow;
+                text-decoration: none;
+                font-family: 'Almarai', sans-serif;
+                font-size: 18px;
+                font-weight: bold;               
+                @media (max-width: 659px){
+                    font-size: 14px;
+                }
+            }
+            .block {
+                display: flex;
+                align-items: center;
+                gap: 2.2rem;
+
+                img {
+                width: 1.4rem;
+                height: 1.4rem;
+                }
+                p {
+                width: fit-content;
+                color: #fff;
+                }
+            }
+        }
+    }
+</style>

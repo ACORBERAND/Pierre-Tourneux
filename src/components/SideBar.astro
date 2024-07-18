@@ -1,0 +1,17 @@
+---
+import NavList from "./NavList.astro";
+---
+
+<header class="wrapper">
+    <nav>
+      <NavList />
+    </nav>
+  </header>
+
+<style lang="scss">
+    header{
+        @media (max-width: 659px) {
+            display: none;
+        }
+    }
+</style>
