@@ -1,12 +1,11 @@
 ---
 import NavList from "./NavList.astro";
+import Logo from "./Logo.astro";
 ---
 
 <header class="mobile">
     <div class="logo">
-        <a class="logo-text" href="/">
-            AC
-        </a>
+        <Logo></Logo>
     </div>
         <button class="burgerBtn">
             <img class="burgerIcon" src="/assets/images/open_menu.webp" alt="icone menu fermé" >
@@ -59,7 +58,7 @@ import NavList from "./NavList.astro";
       display: grid;
       place-items: center;
       z-index: 4;
-      @media (min-width: 660px) {
+      @media (min-width: 960px) {
         display: none;
       }
     }

@@ -1,89 +1,117 @@
 ---
-
+import ButtonFilled from "./ButtonFilled.astro"
+import Logo from "./Logo.astro"
 ---
-
-<ul>
-    <li>
-        <a href="/">ACCUEIL</a>
-    </li>
-    <li>
-        <a href="/osteopathie">OSTÉOPATHIE</a>
-    </li>
-    <li>
-        <a href="/leCabinet">LE CABINET</a>
-    </li>
-    <li>
-        <a href="/contact">CONTACT</a>
-    </li>
-    <li>
-        <a href="/reandezVous">
-            <button>RENDEZ-VOUS</button>
+<section class="containerNavbar">
+    <div class="logoNavList">
+        <a href="/">
+            <img src="../../public/logo.jpg" alt="#"/>
         </a>
-    </li>
-</ul>
+    </div>
+    <ul>
+        <li>
+            <a href="/">ACCUEIL</a>
+        </li>
+        <li>
+            <a href="/osteopathie">OSTÉOPATHIE</a>
+        </li>
+        <li>
+            <a href="/leCabinet">LE CABINET</a>
+        </li>
+        <li>
+            <a href="/contact">CONTACT</a>
+        </li>
+        <li>
+            <a href="/rendezVous">
+                <ButtonFilled title="RENDEZ-VOUS"></ButtonFilled>
+            </a>
+        </li>
+    </ul>
+</section>
 
 <!--descktop vers mobile -->
 <style lang="scss">
     $shadow: #030305;
-    ul{
+    //NavBar
+    .containerNavbar{
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: flex-end;
-        list-style-type: none;
-        gap: 2rem;
-        margin: 2rem 2rem;
-        padding: 0;
-        @media (max-width: 950px){
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        li {
-            position: relative;
-            text-decoration: none;
-            color: $shadow;
-            transition: 0.3s;
-            &:hover{
-                transition: 0.3s;
-                transform: translateY(-10px);
-            }
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -2px; 
-                width: 0;  
-                height: 2px; 
-                background-color: black; 
-                transition: width 0.3s; 
-            }
-            &:hover::after {
+        justify-content: space-between;
+        
+        //Logo navlist
+        .logoNavList{
+            width: 70px;
+            height: 70px;
+            img{
                 width: 100%;
-            }
-            a {
-                color: $shadow;
-                text-decoration: none;
-                font-family: 'Almarai', sans-serif;
-                font-size: 18px;
-                font-weight: bold;               
-                @media (max-width: 659px){
-                    font-size: 14px;
+                height: 100%;
+                border-radius: 50%;
+                @media (max-width: 960px) {
+                    display: none;
                 }
             }
-            .block {
+        }
+        //NavList
+        ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            list-style-type: none;
+            gap: 2rem;
+            margin: 2rem 2rem;
+            padding: 0;
+            @media (max-width: 960px){
                 display: flex;
+                flex-direction: column;
+                justify-content: center;
                 align-items: center;
-                gap: 2.2rem;
-
-                img {
-                width: 1.4rem;
-                height: 1.4rem;
+            }
+            li {
+                position: relative;
+                text-decoration: none;
+                color: $shadow;
+                transition: 0.3s;
+                &:hover{
+                    transition: 0.3s;
+                    transform: translateY(-10px);
                 }
-                p {
-                width: fit-content;
-                color: #fff;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px; 
+                    width: 0;  
+                    height: 2px; 
+                    background-color: black; 
+                    transition: width 0.3s; 
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+                a {
+                    color: $shadow;
+                    text-decoration: none;
+                    font-family: 'K2D', sans-serif;
+                    font-size: 18px;
+                    font-weight: 200;               
+                    @media (max-width: 659px){
+                        font-size: 14px;
+                    }
+                }
+                .block {
+                    display: flex;
+                    align-items: center;
+                    gap: 2.2rem;
+    
+                    img {
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    }
+                    p {
+                    width: fit-content;
+                    color: #fff;
+                    }
                 }
             }
         }
