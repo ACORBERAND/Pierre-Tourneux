@@ -1,6 +1,7 @@
 ---
 import MobileHeader from "../components/MobileHeader.astro";
 import SideBar from "../components/SideBar.astro";
+import Header from "../components/Header.astro";
 interface Props {
 	title: string;
 	description: string;
@@ -28,7 +29,7 @@ const { title, description } = Astro.props;
 		<section class="container">
         <MobileHeader />
 		<SideBar />
-
+		<slot />
 		</section>
         <footer>
             <div class="link_footer">
