@@ -1,13 +1,232 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
+import ButtonFilled from "../components/ButtonFilled.astro";
+import ButtonFilled2 from "../components/ButtonFilled2.astro";
+import ButtonFilled3 from "../components/ButtonFilled3.astro";
 ---
 
 <BaseLayout title="accueil" description="#">
 	<Header title="Cabinet d'ostéopathe" description="de Pierre TOURNEUX"></Header>
-    
+
+	<!-- Partie accès rapide -->
+    <section class="rapidAccess">
+		<!-- Première card "Contact" des trois cards dans cette section -->
+		<div class="rapidAccessBox" id="rapidAccessBox1">
+			<!-- Icone que contient la card -->
+			<div class="containerBox">
+				<div class="imgAccessBox">
+					<img src="#" alt="Icone Contact">
+				</div>
+				<!-- Titre de la card en h3 -->
+				<div>
+					<h3>Contact</h3>
+				</div>
+				<!-- Description de la card -->
+				<div>
+					<p>Vous pouvez aussi nous joindre par téléphone en cliquant ci-dessous.</p>
+				</div>
+				<!-- Bouton de la card -->
+				<div>
+					<ButtonFilled2 title="APPELER"></ButtonFilled2>
+				</div>
+			</div>
+			
+		</div>
+		<!-- Card numéro 2 "Rendez-vous" sur les trois cards -->
+		<div class="rapidAccessBox" id="rapidAccessBox2">
+			<!-- Icone de la card -->
+			<div class="containerBox">
+				<div class="imgAccessBox">
+					<img src="#" alt="Icone Calendrier">
+				</div>
+				<!-- Titre de la card en h3 -->
+				<div>
+					<h3>Rendez-vous en ligne</h3>
+				</div>
+				<!-- Description de la card -->
+				<div>
+					<p>Vous pouvez prendre rendez-vous sur le site doctolib en cliquant ci-dessous.</p>
+				</div>
+				<div>
+					<a href="#">
+						<ButtonFilled title="RENDEZ-VOUS"></ButtonFilled>
+					</a>
+				</div>
+			</div>
+			<!-- Ombrage de la partie de droite de la card -->
+			<div>
+
+			</div>
+		</div>
+		<!-- Card numéro 3 "Horaire du cabinet" -->
+		<div class="rapidAccessBox" id="rapidAccessBox3">
+			<div class="containerBox">
+				<!-- Icone de la card -->
+				<div class="imgAccessBox">
+					<img src="#" alt="Icone Horaire">
+				</div>
+				<!-- Titre de la card -->
+				<div>
+					<h3>Horaire du cabinet</h3>
+				</div>
+				<!-- Descriptionde de la card -->
+				<div>
+					<p>Le cabinet et le secrétariat sont ouverts du lundi au vendredi de 8h à 20h00 ainsi que le samedi de 8h à 19h.</p>
+				</div>
+				<!-- Bouton de la card -->
+				<div>
+					<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
+				</div>
+			</div>
+			<!-- Ombrage de la partie de droite de la card -->
+			<div>
+	
+			</div>
+		</div>
+	</section>
+
+	<!-- Section "Vos Practiciens" -->
+	<section class="vosPracticiens">
+		<div>
+			<div>
+				<h3>Gennifer DEMEY</h3>
+			</div>
+			<div>
+				<p>
+					Emensis itaque difficultatibus multis et nive obrutis callibus 
+					plurimis ubi prope Rauracum ventum est ad supercilia flumini
+				</p>
+			</div>
+			<div>
+				<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
+			</div>
+		</div>
+		<div>
+			<div>
+				<h3>Valentin PUYO</h3>
+			</div>
+			<div>
+				<p>
+					Emensis itaque difficultatibus multis et nive obrutis callibus 
+					plurimis ubi prope Rauracum ventum est ad supercilia flumini
+				</p>
+			</div>
+			<div>
+				<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
+			</div>
+		</div>
+		<div>
+			<div>
+				<h3>Melinda NOËL</h3>
+			</div>
+			<div>
+				<p>
+					Emensis itaque difficultatibus multis et nive obrutis callibus 
+					plurimis ubi prope Rauracum ventum est ad supercilia flumini
+				</p>
+			</div>
+			<div>
+				<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
+			</div>
+		</div>
+		<div>
+			<div>
+				<p>Les consultations se font sur rendez-vous. Vos Ostéopathes assurent aussi les urgences.</p>
+			</div>
+			<div>
+				<p>Le cabinet et le secrétariat sont ouverts du lundi au vendredi de 8h à 20h00 ainsi que le samedi de 8h à 19h.</p>
+			</div>
+			<div>
+				<ButtonFilled title="RENDEZ-VOUS"></ButtonFilled>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section Cabinet -->
+	<section>
+		<div>
+			<h2>Le Cabinet</h2>
+		</div>
+		<div>
+			<p>Vous pourrez profiter du parking qu’offre le centre de santé dans lequel se situe le cabinet.</p>
+		</div>
+		<div>
+			<!-- Intégration de la map -->
+		</div>
+		<div>
+			<p>Le cabinet est situé au 67 route de Coutras, à Saint-Denis-de-Pile.</p>
+		</div>
+		<div>
+			<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
+		</div>
+	</section>
 </BaseLayout>
 
 <style lang="scss">
-    
+    //variable couleur
+	$Orange: #CF6326;
+	$BlueOne: #344E4C;
+	$BlueTwo: #2A5855;
+	$BlueThree: #21625E;
+
+	//def des textes
+	h1{
+		font-family: 'K2D', sans-serif;
+	}
+	h2{
+		font-family: 'K2D', sans-serif;
+	}
+	h3{
+		font-family: 'K2D', sans-serif;
+		font-size: 32px;
+		margin: 0;
+	}
+	p{
+		font-family: 'K2D', sans-serif;
+	}
+
+	.rapidAccess{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		margin-top: 100px;
+		//style de la première card de la section accès rapide
+		.rapidAccessBox{
+			max-width: 410px;
+			height: 345px;
+			display: flex;
+			.containerBox{
+				margin-left: 35px;
+				color: #fff;
+				background: linear-gradient(to right, transparent, rgb(0, 0, 0, 0.0));
+				.imgAccessBox{
+					width: 70px;
+					height: 70px;
+					padding-top: 35px;
+					img{
+						width: 100%;
+						height: 100%;
+					}
+				}
+				p{
+					width: 100%;
+					height: 69px;
+				}
+
+			}
+		}
+		#rapidAccessBox1{
+			background: $BlueOne
+		}
+		#rapidAccessBox2{
+			background: $BlueTwo;
+		}
+		#rapidAccessBox3{
+			background: $BlueThree;
+		}
+	}
+
 </style>

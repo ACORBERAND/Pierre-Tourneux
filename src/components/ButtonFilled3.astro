@@ -1,0 +1,28 @@
+---
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+<button>{title}</button>
+
+<style lang="scss">
+    $Orange: #CF6326;
+button{
+    font-family: 'K2D', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    height: 50px;
+    border-radius: 4px;
+    border: 0px;
+    background: transparent;
+    color: #fff;
+    padding: 0;
+    @media (max-width: 660px) {
+        font-size: 14px;
+        width: 150px;
+        height: 40px;
+    }
+}
+</style>
