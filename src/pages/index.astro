@@ -10,156 +10,172 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 	<Header title="Cabinet d'ostéopathe" description="de Pierre TOURNEUX"></Header>
 
 	<!-- Partie accès rapide -->
-    <section class="rapidAccess">
-		<!-- Première card "Contact" des trois cards dans cette section -->
-		<div class="rapidAccessBox" id="rapidAccessBox1">
-			<!-- Icone que contient la card -->
-			<div class="containerBox">
-				<div class="imgAccessBox">
-					<img src="#" alt="Icone Contact">
+	<section class="container">
+		<section class="rapidAccess">
+			<!-- Première card "Contact" des trois cards dans cette section -->
+			<div class="rapidAccessBox" id="rapidAccessBox1">
+				<!-- Icone que contient la card -->
+				<div class="containerBox">
+					<div class="imgAccessBox">
+						<img src="#" alt="Icone Contact">
+					</div>
+					<!-- Titre de la card en h3 -->
+					<div>
+						<h3>Contact</h3>
+					</div>
+					<!-- Description de la card -->
+					<div>
+						<p>Vous pouvez aussi nous joindre par téléphone en cliquant ci-dessous.</p>
+					</div>
+					<!-- Bouton de la card -->
+					<div>
+						<a href="#">
+							<ButtonFilled2 title="APPELER"></ButtonFilled2>
+						</a>	
+					</div>
 				</div>
-				<!-- Titre de la card en h3 -->
-				<div>
-					<h3>Contact</h3>
+				
+			</div>
+			<!-- Card numéro 2 "Rendez-vous" sur les trois cards -->
+			<div class="rapidAccessBox" id="rapidAccessBox2">
+				<!-- Icone de la card -->
+				<div class="containerBox">
+					<div class="imgAccessBox">
+						<img src="#" alt="Icone Calendrier">
+					</div>
+					<!-- Titre de la card en h3 -->
+					<div>
+						<h3>Rendez-vous en ligne</h3>
+					</div>
+					<!-- Description de la card -->
+					<div>
+						<p>Vous pouvez prendre rendez-vous sur le site doctolib en cliquant ci-dessous.</p>
+					</div>
+					<div>
+						<a href="#">
+							<ButtonFilled title="RENDEZ-VOUS"></ButtonFilled>
+						</a>
+					</div>
 				</div>
-				<!-- Description de la card -->
+				<!-- Ombrage de la partie de droite de la card -->
 				<div>
-					<p>Vous pouvez aussi nous joindre par téléphone en cliquant ci-dessous.</p>
-				</div>
-				<!-- Bouton de la card -->
-				<div>
-					<ButtonFilled2 title="APPELER"></ButtonFilled2>
+
 				</div>
 			</div>
-			
-		</div>
-		<!-- Card numéro 2 "Rendez-vous" sur les trois cards -->
-		<div class="rapidAccessBox" id="rapidAccessBox2">
-			<!-- Icone de la card -->
-			<div class="containerBox">
-				<div class="imgAccessBox">
-					<img src="#" alt="Icone Calendrier">
+			<!-- Card numéro 3 "Horaire du cabinet" -->
+			<div class="rapidAccessBox" id="rapidAccessBox3">
+				<div class="containerBox">
+					<!-- Icone de la card -->
+					<div class="imgAccessBox">
+						<img src="#" alt="Icone Horaire">
+					</div>
+					<!-- Titre de la card -->
+					<div>
+						<h3>Horaire du cabinet</h3>
+					</div>
+					<!-- Descriptionde de la card -->
+					<div>
+						<p>Le cabinet et le secrétariat sont ouverts du lundi au vendredi de 8h à 20h00 ainsi que le samedi de 8h à 19h.</p>
+					</div>
+					<!-- Bouton de la card -->
+					<div>
+						<a href="#">
+							<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
+						</a>	
+					</div>
 				</div>
-				<!-- Titre de la card en h3 -->
+				<!-- Ombrage de la partie de droite de la card -->
 				<div>
-					<h3>Rendez-vous en ligne</h3>
+		
 				</div>
-				<!-- Description de la card -->
+			</div>
+		</section>
+
+	<!-- Section "Vos Practiciens" -->
+		<section class="vosPracticiens">
+			<div>
 				<div>
-					<p>Vous pouvez prendre rendez-vous sur le site doctolib en cliquant ci-dessous.</p>
+					<h3>Gennifer DEMEY</h3>
+				</div>
+				<div>
+					<p>
+						Emensis itaque difficultatibus multis et nive obrutis callibus 
+						plurimis ubi prope Rauracum ventum est ad supercilia flumini
+					</p>
+				</div>
+				<div>
+					<a href="#">
+						<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
+					</a>	
+				</div>
+			</div>
+			<div>
+				<div>
+					<h3>Valentin PUYO</h3>
+				</div>
+				<div>
+					<p>
+						Emensis itaque difficultatibus multis et nive obrutis callibus 
+						plurimis ubi prope Rauracum ventum est ad supercilia flumini
+					</p>
+				</div>
+				<div>
+					<a href="#">
+						<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
+					</a>	
+				</div>
+			</div>
+			<div>
+				<div>
+					<h3>Melinda NOËL</h3>
+				</div>
+				<div>
+					<p>
+						Emensis itaque difficultatibus multis et nive obrutis callibus 
+						plurimis ubi prope Rauracum ventum est ad supercilia flumini
+					</p>
+				</div>
+				<div>
+					<a href="#">
+						<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
+					</a>
+				</div>
+			</div>
+			<div>
+				<div>
+					<p>Les consultations se font sur rendez-vous. Vos Ostéopathes assurent aussi les urgences.</p>
+				</div>
+				<div>
+					<p>Le cabinet et le secrétariat sont ouverts du lundi au vendredi de 8h à 20h00 ainsi que le samedi de 8h à 19h.</p>
 				</div>
 				<div>
 					<a href="#">
 						<ButtonFilled title="RENDEZ-VOUS"></ButtonFilled>
-					</a>
+					</a>	
 				</div>
 			</div>
-			<!-- Ombrage de la partie de droite de la card -->
-			<div>
+		</section>
 
+		<!-- Section Cabinet -->
+		<section>
+			<div>
+				<h2>Le Cabinet</h2>
 			</div>
-		</div>
-		<!-- Card numéro 3 "Horaire du cabinet" -->
-		<div class="rapidAccessBox" id="rapidAccessBox3">
-			<div class="containerBox">
-				<!-- Icone de la card -->
-				<div class="imgAccessBox">
-					<img src="#" alt="Icone Horaire">
-				</div>
-				<!-- Titre de la card -->
-				<div>
-					<h3>Horaire du cabinet</h3>
-				</div>
-				<!-- Descriptionde de la card -->
-				<div>
-					<p>Le cabinet et le secrétariat sont ouverts du lundi au vendredi de 8h à 20h00 ainsi que le samedi de 8h à 19h.</p>
-				</div>
-				<!-- Bouton de la card -->
-				<div>
+			<div>
+				<p>Vous pourrez profiter du parking qu’offre le centre de santé dans lequel se situe le cabinet.</p>
+			</div>
+			<div>
+				<!-- Intégration de la map -->
+			</div>
+			<div>
+				<p>Le cabinet est situé au 67 route de Coutras, à Saint-Denis-de-Pile.</p>
+			</div>
+			<div>
+				<a href="#">
 					<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
-				</div>
+				</a>
 			</div>
-			<!-- Ombrage de la partie de droite de la card -->
-			<div>
-	
-			</div>
-		</div>
-	</section>
-
-	<!-- Section "Vos Practiciens" -->
-	<section class="vosPracticiens">
-		<div>
-			<div>
-				<h3>Gennifer DEMEY</h3>
-			</div>
-			<div>
-				<p>
-					Emensis itaque difficultatibus multis et nive obrutis callibus 
-					plurimis ubi prope Rauracum ventum est ad supercilia flumini
-				</p>
-			</div>
-			<div>
-				<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
-			</div>
-		</div>
-		<div>
-			<div>
-				<h3>Valentin PUYO</h3>
-			</div>
-			<div>
-				<p>
-					Emensis itaque difficultatibus multis et nive obrutis callibus 
-					plurimis ubi prope Rauracum ventum est ad supercilia flumini
-				</p>
-			</div>
-			<div>
-				<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
-			</div>
-		</div>
-		<div>
-			<div>
-				<h3>Melinda NOËL</h3>
-			</div>
-			<div>
-				<p>
-					Emensis itaque difficultatibus multis et nive obrutis callibus 
-					plurimis ubi prope Rauracum ventum est ad supercilia flumini
-				</p>
-			</div>
-			<div>
-				<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
-			</div>
-		</div>
-		<div>
-			<div>
-				<p>Les consultations se font sur rendez-vous. Vos Ostéopathes assurent aussi les urgences.</p>
-			</div>
-			<div>
-				<p>Le cabinet et le secrétariat sont ouverts du lundi au vendredi de 8h à 20h00 ainsi que le samedi de 8h à 19h.</p>
-			</div>
-			<div>
-				<ButtonFilled title="RENDEZ-VOUS"></ButtonFilled>
-			</div>
-		</div>
-	</section>
-
-	<!-- Section Cabinet -->
-	<section>
-		<div>
-			<h2>Le Cabinet</h2>
-		</div>
-		<div>
-			<p>Vous pourrez profiter du parking qu’offre le centre de santé dans lequel se situe le cabinet.</p>
-		</div>
-		<div>
-			<!-- Intégration de la map -->
-		</div>
-		<div>
-			<p>Le cabinet est situé au 67 route de Coutras, à Saint-Denis-de-Pile.</p>
-		</div>
-		<div>
-			<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
-		</div>
+		</section>
 	</section>
 </BaseLayout>
 
@@ -185,7 +201,11 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 	p{
 		font-family: 'K2D', sans-serif;
 	}
-
+		.container{
+		margin-right: 4.6%;
+		margin-left: 4.6%;
+		max-width: 1550px;
+	}
 	.rapidAccess{
 		display: flex;
 		flex-direction: row;
@@ -201,7 +221,7 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 			.containerBox{
 				margin-left: 35px;
 				color: #fff;
-				background: linear-gradient(to right, transparent, rgb(0, 0, 0, 0.0));
+				background: linear-gradient(to right, transparent 75%, rgb(0, 0, 0, .40));
 				.imgAccessBox{
 					width: 70px;
 					height: 70px;
@@ -219,13 +239,18 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 			}
 		}
 		#rapidAccessBox1{
-			background: $BlueOne
+			background: $BlueOne;
+			border-radius: 4px 0 0 4px;
 		}
 		#rapidAccessBox2{
 			background: $BlueTwo;
 		}
 		#rapidAccessBox3{
 			background: $BlueThree;
+			border-radius: 0 4px 4px 0;
+			.containerBox{
+				border-radius: 0 4px 4px 0;
+			}
 		}
 	}
 

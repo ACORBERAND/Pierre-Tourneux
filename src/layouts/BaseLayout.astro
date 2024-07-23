@@ -29,8 +29,8 @@ const { title, description } = Astro.props;
 		<section class="container">
         <MobileHeader />
 		<SideBar />
-		<slot />
 		</section>
+		<slot />
         <footer>
             <div class="link_footer">
                 <p>© Pierre TOURNEUX -<span id="date"></span></p>
@@ -68,12 +68,10 @@ const { title, description } = Astro.props;
 	//Déclaration des variables couleur
 	$Orange: #CF6326;
 	//container
-	html{
-		width: 100vw;
-	}
 	.container{
 		margin-right: 4.6%;
 		margin-left: 4.6%;
+		max-width: 1550px;
 	}
 
 	
