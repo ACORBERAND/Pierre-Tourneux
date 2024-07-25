@@ -92,53 +92,70 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 		</section>
 
 	<!-- Section "Vos Practiciens" -->
-		<section class="vosPracticiens">
-			<div>
-				<div>
-					<h3>Gennifer DEMEY</h3>
+		<section>
+			<div class="vosPracticiens">
+				<div class="containerCard">
+					<div class="backgroundCardPracticiens1">
+						<img src="/public/pierreTourneux.jpg" alt="#">
+					</div>
+					<div class="blurCardPracticiens">
+						<div>
+							<h3>Gennifer DEMEY</h3>
+						</div>
+						<div>
+							<p>
+								Emensis itaque difficultatibus multis et nive obrutis callibus 
+								plurimis ubi prope Rauracum ventum est ad supercilia flumini
+							</p>
+						</div>
+						<div>
+							<a href="#">
+								<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
+							</a>	
+						</div>
+					</div>
 				</div>
-				<div>
-					<p>
-						Emensis itaque difficultatibus multis et nive obrutis callibus 
-						plurimis ubi prope Rauracum ventum est ad supercilia flumini
-					</p>
+				<div class="containerCard">
+					<div class="backgroundCardPracticiens1">
+						<img src="/public/pierreTourneux.jpg" alt="#">
+					</div>
+					<div class="blurCardPracticiens">
+						<div>
+							<h3>Valentin PUYO</h3>
+						</div>
+						<div>
+							<p>
+								Emensis itaque difficultatibus multis et nive obrutis callibus 
+								plurimis ubi prope Rauracum ventum est ad supercilia flumini
+							</p>
+						</div>
+						<div>
+							<a href="#">
+								<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
+							</a>	
+						</div>
+					</div>
 				</div>
-				<div>
-					<a href="#">
-						<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
-					</a>	
+				<div class="containerCard">
+					<div class="blurCardPracticiens">
+						<div>
+							<h3>Melinda NOËL</h3>
+						</div>
+						<div>
+							<p>
+								Emensis itaque difficultatibus multis et nive obrutis callibus 
+								plurimis ubi prope Rauracum ventum est ad supercilia flumini
+							</p>
+						</div>
+						<div>
+							<a href="#">
+								<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
+							</a>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div>
-				<div>
-					<h3>Valentin PUYO</h3>
-				</div>
-				<div>
-					<p>
-						Emensis itaque difficultatibus multis et nive obrutis callibus 
-						plurimis ubi prope Rauracum ventum est ad supercilia flumini
-					</p>
-				</div>
-				<div>
-					<a href="#">
-						<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
-					</a>	
-				</div>
-			</div>
-			<div>
-				<div>
-					<h3>Melinda NOËL</h3>
-				</div>
-				<div>
-					<p>
-						Emensis itaque difficultatibus multis et nive obrutis callibus 
-						plurimis ubi prope Rauracum ventum est ad supercilia flumini
-					</p>
-				</div>
-				<div>
-					<a href="#">
-						<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
-					</a>
+				<div class="backgroundCardPracticiens1">
+					<img src="/public/pierreTourneux.jpg" alt="#">
 				</div>
 			</div>
 			<div>
@@ -153,7 +170,7 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 						<ButtonFilled title="RENDEZ-VOUS"></ButtonFilled>
 					</a>	
 				</div>
-			</div>
+			</div>		
 		</section>
 
 		<!-- Section Cabinet -->
@@ -180,13 +197,13 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 </BaseLayout>
 
 <style lang="scss">
-    //variable couleur
+    /*variable couleur*/
 	$Orange: #CF6326;
 	$BlueOne: #344E4C;
 	$BlueTwo: #2A5855;
 	$BlueThree: #21625E;
 
-	//def des textes
+	/*def des textes*/
 	h1{
 		font-family: 'K2D', sans-serif;
 	}
@@ -207,14 +224,16 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 		margin-left: 4.6%;
 		max-width: 1550px;
 	}
+	/* Premier bloc de la page, le bloc d'accès rapide */ 
 	.rapidAccess{
+		position: relative;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: flex-start;
 		flex-wrap: wrap;
-		margin-top: 100px;
-		//style de la première card de la section accès rapide
+		margin-top: 200px;
+		/*style de la première card de la section accès rapide*/
 		.rapidAccessBox{
 			max-width: 410px;
 			height: 345px;
@@ -233,7 +252,7 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 					}
 				}
 				p{
-					width: 100%;
+					width: 90%;
 					height: 69px;
 				}
 
@@ -252,6 +271,32 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 			.containerBox{
 				border-radius: 0 4px 4px 0;
 			}
+		}
+	}
+	/* Le deuxième bloc, Vos practiciens*/
+	.vosPracticiens{
+		padding: 200px 0;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		.containerCard{
+			max-width: 315px;
+			max-height: 500px;
+			.backgroundCardPracticiens1{
+				img{
+					width: 315px;
+					height: 500px;
+				}
+			}
+			.blurCardPracticiens{
+				position: absolute;
+				width: 315px;
+				height: 225px;
+			}
+
 		}
 	}
 
