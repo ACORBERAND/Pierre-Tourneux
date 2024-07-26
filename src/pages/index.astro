@@ -10,7 +10,7 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 	<Header title="Cabinet d'ostéopathe" description="de Pierre TOURNEUX"></Header>
 
 	<!-- Partie accès rapide -->
-	<section class="container">
+	<div class="container">
 		<section class="rapidAccess">
 			<!-- Première card "Contact" des trois cards dans cette section -->
 			<div class="rapidAccessBox" id="rapidAccessBox1">
@@ -92,85 +92,31 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 		</section>
 
 	<!-- Section "Vos Practiciens" -->
-		<section>
-			<div class="vosPracticiens">
-				<div class="containerCard">
-					<div class="backgroundCardPracticiens1">
-						<img src="/public/pierreTourneux.jpg" alt="#">
-					</div>
-					<div class="blurCardPracticiens">
-						<div>
-							<h3>Gennifer DEMEY</h3>
+		<section class="vosPracticiens">
+			<h2>Vos Practiciens</h2>
+			<div class="containerCardPracticiens">
+				<div class="containerCardPracticiens1">
+					<a href="">
+						<div class="blocBlurCard">
+
 						</div>
-						<div>
-							<p>
-								Emensis itaque difficultatibus multis et nive obrutis callibus 
-								plurimis ubi prope Rauracum ventum est ad supercilia flumini
-							</p>
-						</div>
-						<div>
-							<a href="#">
-								<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
-							</a>	
-						</div>
-					</div>
-				</div>
-				<div class="containerCard">
-					<div class="backgroundCardPracticiens1">
-						<img src="/public/pierreTourneux.jpg" alt="#">
-					</div>
-					<div class="blurCardPracticiens">
-						<div>
-							<h3>Valentin PUYO</h3>
-						</div>
-						<div>
-							<p>
-								Emensis itaque difficultatibus multis et nive obrutis callibus 
-								plurimis ubi prope Rauracum ventum est ad supercilia flumini
-							</p>
-						</div>
-						<div>
-							<a href="#">
-								<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
-							</a>	
-						</div>
-					</div>
-				</div>
-				<div class="containerCard">
-					<div class="blurCardPracticiens">
-						<div>
-							<h3>Melinda NOËL</h3>
-						</div>
-						<div>
-							<p>
-								Emensis itaque difficultatibus multis et nive obrutis callibus 
-								plurimis ubi prope Rauracum ventum est ad supercilia flumini
-							</p>
-						</div>
-						<div>
-							<a href="#">
-								<ButtonFilled3 title="EN SAVOIRS PLUS"></ButtonFilled3>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="backgroundCardPracticiens1">
-					<img src="/public/pierreTourneux.jpg" alt="#">
-				</div>
-			</div>
-			<div>
-				<div>
-					<p>Les consultations se font sur rendez-vous. Vos Ostéopathes assurent aussi les urgences.</p>
-				</div>
-				<div>
-					<p>Le cabinet et le secrétariat sont ouverts du lundi au vendredi de 8h à 20h00 ainsi que le samedi de 8h à 19h.</p>
-				</div>
-				<div>
-					<a href="#">
-						<ButtonFilled title="RENDEZ-VOUS"></ButtonFilled>
 					</a>	
-				</div>
-			</div>		
+				</div>	
+				<div class="containerCardPracticiens1">
+					<a href="">
+						<div class="blocBlurCard">
+
+						</div>
+					</a>	
+				</div>	
+				<div class="containerCardPracticiens1">
+					<a href="">
+						<div class="blocBlurCard">
+
+						</div>
+					</a>	
+				</div>	
+			</div>
 		</section>
 
 		<!-- Section Cabinet -->
@@ -193,7 +139,7 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 				</a>
 			</div>
 		</section>
-	</section>
+	</div>
 </BaseLayout>
 
 <style lang="scss">
@@ -209,6 +155,10 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 	}
 	h2{
 		font-family: 'K2D', sans-serif;
+
+		@media (min-width: 780px) {
+			font-size: 48px;
+		}
 	}
 	h3{
 		font-family: 'K2D', sans-serif;
@@ -218,6 +168,10 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 	p{
 		font-family: 'K2D', sans-serif;
 		font-weight: 200;
+		font-size: 14px;
+		@media (min-width: 780px) {
+			font-size: 18px;
+		}
 	}
 		.container{
 		margin-right: 4.6%;
@@ -275,28 +229,44 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 	}
 	/* Le deuxième bloc, Vos practiciens*/
 	.vosPracticiens{
-		padding: 200px 0;
 		position: relative;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
-		.containerCard{
-			max-width: 315px;
-			max-height: 500px;
-			.backgroundCardPracticiens1{
-				img{
-					width: 315px;
-					height: 500px;
-				}
+		padding: 200px 0;
+		text-align: center;
+		h2{
+			padding-bottom: 64px;
+		}
+		.containerCardPracticiens{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 32px;
+			@media (min-width: 810px) {
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				gap: 64px;	
 			}
-			.blurCardPracticiens{
-				position: absolute;
+			.containerCardPracticiens1{
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				width: 315px;
+				height: 500px;
+				background-image: url(/public/pierreTourneux.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				border-radius: 4px;
+			}
+			.blocBlurCard{
 				width: 315px;
 				height: 225px;
+				background: rgb(52, 78, 76, .60);
+				backdrop-filter: blur(6px);
+				border-radius: 0 0 4px 4px;
 			}
-
 		}
 	}
 
