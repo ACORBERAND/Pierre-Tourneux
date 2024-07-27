@@ -3,7 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import ButtonFilled from "../components/ButtonFilled.astro";
 import ButtonFilled2 from "../components/ButtonFilled2.astro";
-import ButtonFilled3 from "../components/ButtonFilled3.astro";
+import ButtonFilledWhtie from "../components/ButtonFilledWhite.astro";
+import ButtonFilledBlack from "../components/ButtonFilledBlack.astro";
 ---
 
 <BaseLayout title="accueil" description="#">
@@ -51,7 +52,7 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 					<div>
 						<p>Vous pouvez prendre rendez-vous sur le site doctolib en cliquant ci-dessous.</p>
 					</div>
-					<div>
+						<div>
 						<a href="#">
 							<ButtonFilled></ButtonFilled>
 						</a>
@@ -80,7 +81,7 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 					<!-- Bouton de la card -->
 					<div>
 						<a href="#">
-							<ButtonFilled3></ButtonFilled3>
+							<ButtonFilledWhtie></ButtonFilledWhtie>
 						</a>	
 					</div>
 				</div>
@@ -101,7 +102,7 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 							<p>Emensis itaque difficultatibus multis et nive obrutis callibus plurimis 
 							ubi prope Rauracum ventum est ad supercilia flumini</p>
 							<a href="#">
-								<ButtonFilled3></ButtonFilled3>
+								<ButtonFilledWhtie></ButtonFilledWhtie>
 							</a>
 						</div>
 				</div>	
@@ -111,7 +112,7 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 							<p>Emensis itaque difficultatibus multis et nive obrutis callibus plurimis 
 							ubi prope Rauracum ventum est ad supercilia flumini</p>
 							<a href="#">
-								<ButtonFilled3></ButtonFilled3>
+								<ButtonFilledWhtie></ButtonFilledWhtie>
 							</a>
 						</div>
 				</div>	
@@ -121,7 +122,7 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 							<p>Emensis itaque difficultatibus multis et nive obrutis callibus plurimis 
 							ubi prope Rauracum ventum est ad supercilia flumini</p>
 							<a href="#">
-								<ButtonFilled3></ButtonFilled3>
+								<ButtonFilledWhtie></ButtonFilledWhtie>
 							</a>
 						</div>
 				</div>	
@@ -138,7 +139,7 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 		</section>
 
 		<!-- Section Cabinet -->
-		<section>
+		<section class="cabinetLieux">
 			<div>
 				<h2>Le Cabinet</h2>
 			</div>
@@ -146,14 +147,14 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 				<p>Vous pourrez profiter du parking qu’offre le centre de santé dans lequel se situe le cabinet.</p>
 			</div>
 			<div>
-				<!-- Intégration de la map -->
+				<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.741471519222!2d-0.20438632283925354!3d44.98867987107011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd554cc66595d93b%3A0xc9e4d11c3cbd7af!2s67%20Rte%20de%20Coutras%2C%2033910%20Saint-Denis-de-Pile!5e1!3m2!1sfr!2sfr!4v1722115371219!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 			<div>
 				<p>Le cabinet est situé au 67 route de Coutras, à Saint-Denis-de-Pile.</p>
 			</div>
 			<div>
 				<a href="#">
-					<ButtonFilled3></ButtonFilled3>
+					<ButtonFilledBlack></ButtonFilledBlack>
 				</a>
 			</div>
 		</section>
@@ -311,5 +312,22 @@ import ButtonFilled3 from "../components/ButtonFilled3.astro";
 			}
 		}
 	}
-
+	/* Le troisème bloc  */
+	.cabinetLieux{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		h2{
+			margin: 0;
+			margin-bottom: 32px;
+		}
+		a{
+			color: #000;
+		}
+		.map{
+			border-radius: 4px;
+		}
+	}
 </style>
