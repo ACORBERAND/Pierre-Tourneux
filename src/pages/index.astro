@@ -303,10 +303,16 @@ import ButtonFilledBlack from "../components/ButtonFilledBlack.astro";
 	/* Le deuxième bloc, Vos practiciens*/
 	.vosPracticiens{
 		position: relative;
-		padding: 200px 0;
 		text-align: center;
+		padding: 100px 0;
+		@media (min-width:780px) {
+			padding: 200px 0;
+		}
 		h2{
-			padding-bottom: 64px;
+			padding-bottom: 32px;
+			@media (min-width: 780px) {
+				padding-bottom: 64px;
+			}
 		}
 		.containerCardPracticiens{
 			display: flex;
@@ -325,35 +331,52 @@ import ButtonFilledBlack from "../components/ButtonFilledBlack.astro";
 				display: flex;
 				align-items: flex-end;
 				justify-content: center;
-				width: 315px;
-				height: 500px;
-				background-image: url(/public/pierreTourneux.webp);
+				width: 220.5px;
+				height: 350px;
+				background-image: url(/public/assets/image/pierreTourneux.webp);
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: center;
 				border-radius: 4px;
+				@media (min-width: 780px) {
+					width: 315px;
+					height: 500px;
+				}
 			}
 			.blocBlurCard{
 				display: flex;
 				flex-direction: column;
 				justify-content: start;
 				align-items:flex-start;
-				width: 315px;
-				height: 225px;
+				width: 220.5px;
+				height: 157.5px;
 				background: rgb(52, 78, 76, .60);
 				backdrop-filter: blur(6px);
 				border-radius: 0 0 4px 4px;
+				@media (min-width: 780px) {
+					width: 315px;
+					height: 225px;
+				}
 				h3{
-					margin: 8px 12px;
+					margin: 4px 6px;
 					color: #fff;
+					@media (min-width: 780px) {
+						margin: 8px 12px;
+					}
 				}
 				p{
-					margin: 8px 12px;
+					margin: 4px 6px;
 					text-align: start;
 					color: #fff;
+					@media (min-width: 780px) {
+						margin: 8px 12px;
+					}
 				}
 				a{
-					margin: 0px 12px;
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					text-decoration: none;
 				}
 			}
 		}
@@ -371,6 +394,7 @@ import ButtonFilledBlack from "../components/ButtonFilledBlack.astro";
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 		h2{
 			margin: 0;
 			margin-bottom: 32px;
