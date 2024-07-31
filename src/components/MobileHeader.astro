@@ -32,9 +32,10 @@ import Logo from "./Logo.astro";
   </script>
 
 <style lang="scss">
-  $cream: #F4EEE0;
-	$shadow: #030305;
-	$greenforest: #00504D;
+    $White: #fff;
+    $Black: #000;
+    $Orange: #CF6326;
+
     .hidden {
       display: none;
     }
@@ -54,7 +55,7 @@ import Logo from "./Logo.astro";
       z-index: 19;
       transition: transform 0.2s ease-out;
       transform: translateX(100%);
-      background-color: $cream;
+      background-color: $White;
       display: grid;
       place-items: center;
       z-index: 4;
@@ -77,7 +78,7 @@ import Logo from "./Logo.astro";
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: $cream;
+      background-color: transparent;
       @media (min-width: 960px) {
         display: none;
       }
@@ -91,7 +92,7 @@ import Logo from "./Logo.astro";
         font-size: 36px;
         font-family: 'Almarai', sans-serif;
 			  font-weight: bold;
-			  color: $shadow;
+			  color: $Black;
         text-decoration: none;
         }
       }

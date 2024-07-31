@@ -31,13 +31,17 @@ import Logo from "./Logo.astro"
 
 <!--descktop vers mobile -->
 <style lang="scss">
-    $shadow: #030305;
+    $Black: #000;
     /*NavBar */
     .containerNavbar{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        @media (max-width:960px) {
+            display: flex;
+            flex-direction: column;
+        }
         
         /*Logo navlist*/
         .logoNavList{
@@ -66,11 +70,12 @@ import Logo from "./Logo.astro"
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                margin: 0;
             }
             li {
                 position: relative;
                 text-decoration: none;
-                color: $shadow;
+                color: $Black;
                 transition: 0.3s;
                 &:hover{
                     transition: 0.3s;
@@ -90,7 +95,7 @@ import Logo from "./Logo.astro"
                     width: 100%;
                 }
                 a {
-                    color: $shadow;
+                    color: $Black;
                     text-decoration: none;
                     font-family: 'K2D', sans-serif;
                     font-size: 18px;
