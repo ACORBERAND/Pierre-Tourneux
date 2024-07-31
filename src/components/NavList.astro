@@ -5,7 +5,7 @@ import Logo from "./Logo.astro"
 <section class="containerNavbar">
     <div class="logoNavList">
         <a href="/">
-            <img src="/public/logo.webp" alt="#"/>
+            PT
         </a>
     </div>
     <ul>
@@ -47,13 +47,9 @@ import Logo from "./Logo.astro"
         .logoNavList{
             width: 70px;
             height: 70px;
-            img{
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                @media (max-width: 960px) {
-                    display: none;
-                }
+            @media (max-width: 959px) {
+                display: none;
+
             }
         }
         /*NavList*/
