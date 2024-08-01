@@ -1,0 +1,206 @@
+---
+interface Props {
+    title1: string;
+    title2: string;
+    title3: string;
+    title4: string;
+    title5: string;
+    title6: string;
+}
+
+const { title1, title2, title3, title4, title5, title6 } = Astro.props;
+---
+
+<section class="vosPracticiens">
+    <div class="containerCardPracticiens">
+        <div class="containerCardPracticiens1">
+                <div class="blocBlurCard">
+                    <h3>{title1}</h3>
+                </div>
+        </div>	
+        <div class="containerCardPracticiens2">
+                <div class="blocBlurCard">
+                    <h3>{title2}</h3>
+                </div>
+        </div>	
+        <div class="containerCardPracticiens3">
+                <div class="blocBlurCard">
+                    <h3>{title3}</h3>
+                </div>
+        </div>	
+    </div>
+    <div class="containerCardPracticiens">
+        <div class="containerCardPracticiens4">
+                <div class="blocBlurCard">
+                    <h3>{title4}</h3>
+                </div>
+        </div>	
+        <div class="containerCardPracticiens5">
+                <div class="blocBlurCard">
+                    <h3>{title5}</h3>
+                </div>
+        </div>	
+        <div class="containerCardPracticiens6">
+                <div class="blocBlurCard">
+                    <h3>{title6}</h3>
+                </div>
+        </div>	
+    </div>
+</section>
+
+<style lang="scss">
+    .vosPracticiens{
+		position: relative;
+		text-align: center;
+		padding: 100px 0;
+		@media (min-width:780px) {
+			padding: 200px 0;
+		}
+		.containerCardPracticiens{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 32px;
+			@media (min-width: 810px) {
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				gap: 64px;	
+			}
+			.containerCardPracticiens1{
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				width: 220.5px;
+				height: 350px;
+				background-image: url(/public/assets/image/femme-enceinte-min.webp);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				border-radius: 4px;
+				@media (min-width: 780px) {
+					width: 315px;
+					height: 500px;
+				}
+			}
+            .containerCardPracticiens2{
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				width: 220.5px;
+				height: 350px;
+				background-image: url(/public/assets/image/les-bebes-min.webp);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				border-radius: 4px;
+				@media (min-width: 780px) {
+					width: 315px;
+					height: 500px;
+				}
+			}
+            .containerCardPracticiens3{
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				width: 220.5px;
+				height: 350px;
+				background-image: url(/public/assets/image/enfants-adolescents-min.webp);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				border-radius: 4px;
+				@media (min-width: 780px) {
+					width: 315px;
+					height: 500px;
+				}
+			}
+            .containerCardPracticiens4{
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				width: 220.5px;
+				height: 350px;
+				background-image: url(/public/assets/image/adulte-min.webp);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				border-radius: 4px;
+				@media (min-width: 780px) {
+					width: 315px;
+					height: 500px;
+				}
+			}
+            .containerCardPracticiens5{
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				width: 220.5px;
+				height: 350px;
+				background-image: url(/public/assets/image/sportif-min.webp);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				border-radius: 4px;
+				@media (min-width: 780px) {
+					width: 315px;
+					height: 500px;
+				}
+			}
+            .containerCardPracticiens6{
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				width: 220.5px;
+				height: 350px;
+				background-image: url(/public/assets/image/personnes-agees-min.webp);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				border-radius: 4px;
+				@media (min-width: 780px) {
+					width: 215px;
+					height: 300px;
+				}
+			}
+			.blocBlurCard{
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				align-items:flex-start;
+				width: 220.5px;
+				height: 157.5px;
+				background: rgb(52, 78, 76, .60);
+				backdrop-filter: blur(6px);
+				border-radius: 0 0 4px 4px;
+				@media (min-width: 780px) {
+					width: 215px;
+					height: 125px;
+				}
+				h3{
+					margin: 4px 6px;
+					color: #fff;
+					@media (min-width: 780px) {
+						margin: 8px 12px;
+					}
+				}
+				p{
+					margin: 4px 6px;
+					text-align: start;
+					color: #fff;
+					@media (min-width: 780px) {
+						margin: 8px 12px;
+					}
+				}
+				a{
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+</style>
