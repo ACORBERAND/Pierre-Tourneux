@@ -1,3 +1,198 @@
 ---
+interface Props {
+    title1: string;
+    title2: string;
+    title3: string;
+    title4: string;
+    title5: string;
+    title6: string;
+    title7: string;
+    description1: string;
+    description2: string;
+    description3: string;
+    description4: string;
+    description5: string;
+    description6: string;
+    description7: string;
+}
 
+const { title1, title2, title3, title4, title5, title6, title7, 
+        description1, description2, description3, description4, description5, description6, description7 } = Astro.props;
 ---
+
+<section class="accordion">
+    <ul>
+        <li>
+            <input type="radio" name="accordion" id="first" checked>
+            <label for="first">Musculo-squelettique</label>
+            <div class="content">
+                <p>Mal de dos (lumbago, lombalgie, dorsalgie, cervicalgie, scoliose)</p>
+                <p>Entorses</p>
+                <p>Douleur de coccyx</p>
+                <p>Douleurs liées à une asymétrie des membres inférieurs</p>
+                <p>Douleurs de pied, cheville, genou, hanche, bassin, cou, épaule, coude, poignet, main, côtes</p>
+                <p>Séquelles de traumatismes : fracture ancienne, luxation, entorse, accident de voiture, chocs, coup du lapin</p>
+                <p>Cicatrice chirurgicale</p>
+                <p>Douleur à la marche</p>
+                <p>Toutes pertes de mobilité d’origine mécanique</p>
+                <p>Trouble postural</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="second">
+            <label for="second">Titre 2</label>
+            <div class="content">
+                <p>Description 2</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="third">
+            <label for="third">Titre 3</label>
+            <div class="content">
+                <p>Description 3</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="fourth">
+            <label for="fourth">Titre 4</label>
+            <div class="content">
+                <p>Description 4</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="fifth">
+            <label for="fifth">Titre 5</label>
+            <div class="content">
+                <p>Description 5</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="sixth">
+            <label for="sixth">Titre 6</label>
+            <div class="content">
+                <p>Description 6</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="seventh">
+            <label for="seventh">Titre 7</label>
+            <div class="content">
+                <p>Description 7</p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<style lang="scss">
+
+    // Variables
+    $accordion-bg: #e3edf7;
+    $shadow-color: rgba(0, 0, 0, 0.15);
+    $shadow-light-color: rgba(255, 255, 255, 0.7);
+    $font-size-label: 18px;
+    $font-size-icon: 24px;
+    $padding-content: 10px;
+
+    // Mixin pour les transitions
+    @mixin transition($property, $duration, $timing-function: ease-out) {
+        transition: $property $duration $timing-function;
+    }
+
+    .accordion {
+        margin: 60px auto;
+        max-width: 600px;
+        width: 90%; // Utiliser un pourcentage pour une meilleure adaptabilité
+
+        ul {
+            padding: 0; // Éviter le padding par défaut
+        }
+
+        li {
+            list-style: none;
+            width: 100%;
+            margin: 10px 0; // Réduire la marge pour les petits écrans
+            padding: 10px;
+            border-radius: 4px;
+            background: $accordion-bg;
+            box-shadow: 6px 6px 10px -1px $shadow-color,
+                        -6px -6px 10px -1px $shadow-light-color;
+
+            label {
+                display: flex;
+                align-items: center;
+                padding: $padding-content;
+                font-size: $font-size-label;
+                font-weight: 500;
+                cursor: pointer;
+
+                &::before {
+                    content: '+';
+                    margin-right: 10px;
+                    font-size: $font-size-icon;
+                    font-weight: 600;
+                }
+            }
+
+            .content {
+                color: #555;
+                padding: 0 10px;
+                line-height: 24px; // Ajuster la hauteur de ligne pour les petits écrans
+                max-height: 0;
+                overflow: hidden;
+                @include transition(max-height, 0.5s);
+                @include transition(padding, 0.5s);
+
+                // Contenu visible quand le radio est sélectionné
+                input[type="radio"]:checked + label + & {
+                    max-height: 600px; // Ajuster si nécessaire en fonction du contenu
+                    padding: $padding-content 10px 20px;
+                }
+            }
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        // Icône quand le radio est sélectionné
+        input[type="radio"]:checked + label::before {
+            content: '-';
+        }
+    }
+
+    // Media Queries pour les écrans plus petits
+    @media (max-width: 768px) {
+        .accordion {
+            max-width: 100%; // Assurer que l'accordéon utilise toute la largeur disponible sur les petits écrans
+
+            li {
+                margin: 5px 0; // Réduire la marge entre les éléments
+
+                label {
+                    font-size: 14px; // Réduire encore la taille de la police
+
+                    &::before {
+                        font-size: 18px; // Réduire la taille de l'icône
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .accordion {
+            li {
+                margin: 3px 0; // Réduire davantage la marge pour les très petits écrans
+
+                label {
+                    font-size: 12px; // Taille de police plus petite pour les très petits écrans
+
+                    &::before {
+                        font-size: 16px; // Taille d'icône encore réduite
+                    }
+                }
+            }
+        }
+    }
+
+</style>

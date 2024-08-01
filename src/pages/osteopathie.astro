@@ -1,10 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
+import Modal from "../components/Modal.astro";
 ---
 
 <BaseLayout title="osteopathie" description="#">
-    <Header title="Ostéopathie" description=""></Header>
+    <Header title="Ostéopathie" description="" />
+
+    <!-- partie qu'est ce que l'ostéopathie -->
     <section class="osteopathie">
         <div>
             <h2>Qu'est-ce que l'ostéopathie?</h2>
@@ -21,15 +24,29 @@ import Header from "../components/Header.astro";
             <p>L'ostéopathie peut se pratiquer à tous les âges.</p>
         </div>
     </section>
-    <section class="systèmesOsteopathie">
-        <!-- Incorporer les différents modals -->
-    </section>
-    <section class="quandConsulter">
 
+    <!-- Section avec les 7 text en accordeon pour comprendre le système de l'ostéopathie -->
+        
+
+    <!-- Section modal pour savoir quand il faut aller consulter -->
+    <section class="quandConsulter">
+        <Modal 
+        title1=""
+        title2=""
+        title3=""
+        title4=""
+        title5=""
+        title6=""
+        title7=""
+        />
     </section>
+
+    <!-- Section les différents types d'ostéopathie pratiqué -->
     <section class="typeOsteopathie">
 
     </section>
+
+    <!-- Section C'est normal les craquements -->
     <section class="craquementOsteopathie">
         <div>
             <h2></h2>
@@ -40,3 +57,9 @@ import Header from "../components/Header.astro";
         </div>
     </section>
 </BaseLayout>
+
+<style lang="scss">
+    
+
+    // Section ...
+</style>
