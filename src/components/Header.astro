@@ -37,11 +37,11 @@ const { title, description } = Astro.props;
       h1{
         color: #fff;
         font-family: 'K2D', sans-serif;
-        font-size: 56px;
+        font-size: 32px;
         font-weight: bold;
         margin: 0;
-        @media (max-width: 660px) {
-        font-size: 32px;
+        @media (min-width: 660px) {
+          font-size: 56px;
       }
       }
       h2{
