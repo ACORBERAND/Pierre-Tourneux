@@ -1,0 +1,184 @@
+<section class="accordion">
+    <ul>
+        
+        <li>
+            <input type="checkbox" id="first">
+            <label for="first">Musculo-squelettique</label>
+            <div class="content">
+                <p>- Mal de dos (lumbago, lombalgie, dorsalgie, cervicalgie, scoliose)</p>
+                <p>- Entorses</p>
+                <p>- Douleur de coccyx</p>
+                <p>- Douleurs liées à une asymétrie des membres inférieurs</p>
+                <p>- Douleurs de pied, cheville, genou, hanche, bassin, cou, épaule, coude, poignet, main, côtes</p>
+                <p>- Séquelles de traumatismes : fracture ancienne, luxation, entorse, accident de voiture, chocs, coup du lapin</p>
+                <p>- Cicatrice chirurgicale</p>
+                <p>- Douleur à la marche</p>
+                <p>- Toutes pertes de mobilité d’origine mécanique</p>
+                <p>- Trouble postural</p>
+            </div>
+        </li>
+        <!-- Digestif -->
+        <li>
+            <input type="checkbox" id="second">
+            <label for="second">Digestif</label>
+            <div class="content">
+                <p>-Ballonnement</p>
+                <p>-Aérophagie</p>
+                <p>-Troubles du transit (constipation, diarrhée)</p>
+                <p>-Difficulté à digérer</p>
+                <p>-Lourdeur après les repas</p>
+                <p>-Acidité gastrique</p>
+                <p>-Brûlure gastrique</p>
+                <p>-Reflux gastro-oesophagien</p>
+                <p>-Point de côté</p>
+                <p>-Séquelles d’interventions chirurgicales</p>
+            </div>
+        </li>
+        <!-- Uro-gynécologique -->
+        <li>
+            <input type="checkbox" id="third">
+            <label for="third">Uro-gynécologique</label>
+            <div class="content">
+                <p>-Douleur de cycle</p>
+                <p>-Douleur lors des rapports</p>
+                <p>-Infection urinaire à répétition</p>
+                <p>-Fuites urinaires</p>
+                <p>-Troubles de la miction chez l'homme et la femme</p>
+                <p>-Suite de grossesse</p>
+                <p>-Problème d'infertilité</p>
+                <p>-Brûlures urinaires</p>
+                <p>-Séquelles d’interventions chirurgicales</p>
+                <p>-Absence de menstruations</p>
+                <p>-Menstruations trop abondantes</p>
+            </div>
+        </li>
+        <!-- Neurologie -->
+        <li>
+            <input type="checkbox" id="four">
+            <label for="four">Neurologie</label>
+            <div class="content">
+                <p>-Sciatique/sciatalgie</p>
+                <p>-Cruralgie</p>
+                <p>-Névralgie cervico-brachial</p>
+                <p>-Syndrôme du canal carpien/canal de Guyon</p>
+                <p>-Névralgie inter-costale</p>
+                <p>-Névralgie d'Arnold</p>
+                <p>-Névralgie du Trijumeau</p>
+                <p>-Syndrôme du défilé des scalènes</p>
+                <p>-Syndrôme costo-claviculaire</p>
+                <p>-Fourmillements/douleurs dans les bras et les jambes</p>
+            </div>
+        </li>
+        <!-- ORL et crânien -->
+        <li>
+            <input type="checkbox" id="five">
+            <label for="five">ORL et crânien</label>
+            <div class="content">
+                <p>-Sinusite chronique</p>
+                <p>-Rhinite</p>
+                <p>-Migraine, céphalée (maux de tête)</p>
+                <p>-Acouphène (bourdonnement/sifflements dans les oreilles)</p>
+                <p>-Vertiges</p>
+                <p>-Douleurs et blocages de la mâchoire</p>
+            </div>
+        </li>
+        <!-- Cardiovasculaire -->
+        <li>
+            <input type="checkbox" id="six">
+            <label for="six">Cardiovasculaire</label>
+            <div class="content">
+                <p>-Troubles circulatoire des membres inférieurs (jambes lourdes), oedèmes</p>
+                <p>-Palpitations oppression thoracique dues aux effets du stress</p>
+                <p>-Asthme</p>
+                <p>-Essouflements, difficultés à respirer</p>
+            </div>
+        </li>
+        <!-- Psychosomatique et somato-émotionnel -->
+        <li>
+            <input type="checkbox" id="seven">
+            <label for="seven">Psychosomatique et somato-émotionnel</label>
+            <div class="content">
+                <p>-Stress/angoisse/anxiété</p>
+                <p>-Fatigue</p>
+                <p>-Irritabilité</p>
+                <p>-Trouble du sommeil</p>
+                <p>-État dépressif</p>
+                <p>-Lassitude</p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<style lang="css">
+    .accordion {
+        margin: 60px auto;
+        max-width: 600px;
+        width: 90%;
+    }
+    
+
+    p{
+        font-family: 'K2D', sans-serif;
+        font-size: 14px;
+    }
+
+    @media (min-width: 780px) {
+        p{
+            font-size: 18px;
+        }
+    }
+    .accordion ul {
+        padding: 0;
+    }
+
+    .accordion li {
+        list-style: none;
+        margin: 20px 0;
+        padding: 10px;
+        border-radius: 4px;
+        background: #ffffff;
+        box-shadow: 6px 6px 10px 3px rgba(0, 0, 0, 0.15),
+                    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    }
+    
+    .accordion label {
+        font-family: 'K2D', sans-serif;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .accordion label::before {
+        content: '+';
+        margin-right: 10px;
+        font-size: 24px;
+        font-weight: 600;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .accordion input[type="checkbox"] {
+        display: none;
+    }
+
+    .accordion .content {
+        color: #000;
+        padding: 0 10px;
+        line-height: 26px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    }
+
+    .accordion input[type="checkbox"]:checked + label + .content {
+        max-height: 1000px; /* Ajuster si nécessaire */
+        padding: 10px 10px 20px;
+    }
+
+    .accordion input[type="checkbox"]:checked + label::before {
+        content: '-';
+    }
+
+</style>

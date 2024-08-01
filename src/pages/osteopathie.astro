@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
+import TextReduce from "../components/TextReduce.astro";
 import Modal from "../components/Modal.astro";
 ---
 
@@ -8,54 +9,58 @@ import Modal from "../components/Modal.astro";
     <Header title="Ostéopathie" description="" />
 
     <!-- partie qu'est ce que l'ostéopathie -->
-    <section class="osteopathie">
-        <div>
-            <h2>Qu'est-ce que l'ostéopathie?</h2>
-        </div>
-        <div>
-            <p>L'ostéopathie est une médecine manuelle et globale basée sur l’anatomie et la physiologie reconnue par l'OMS 
-            (Organisation Mondiale de la Santé).</p>
-            <p>Elle a pour objectif de repérer et de restaurer manuellement certains manques de mobilité des structures du 
-            corps humain, afin d’agir efficacement sur certaines douleurs et certains troubles fonctionnels, aussi bien à 
-            titre préventif que curatif.</p>
-            <p>L'ostéopathie comporte plusieurs outils, tels que les techniques musculaires, articulaires 
-            (avec ou sans craquement), de fasciathérapie, tendineuses, ligamentaires, énergétiques, biodynamiques, 
-            posturales, crâniennes, viscérales, vasculaires, neurologiques, glandulaires et somato-émotionnelles.</p>
-            <p>L'ostéopathie peut se pratiquer à tous les âges.</p>
-        </div>
-    </section>
+    <div>
+        <section class="osteopathie">
+            <div>
+                <h2>Qu'est-ce que l'ostéopathie?</h2>
+            </div>
+            <div>
+                <p>L'ostéopathie est une médecine manuelle et globale basée sur l’anatomie et la physiologie reconnue par l'OMS 
+                (Organisation Mondiale de la Santé).</p>
+                <p>Elle a pour objectif de repérer et de restaurer manuellement certains manques de mobilité des structures du 
+                corps humain, afin d’agir efficacement sur certaines douleurs et certains troubles fonctionnels, aussi bien à 
+                titre préventif que curatif.</p>
+                <p>L'ostéopathie comporte plusieurs outils, tels que les techniques musculaires, articulaires 
+                (avec ou sans craquement), de fasciathérapie, tendineuses, ligamentaires, énergétiques, biodynamiques, 
+                posturales, crâniennes, viscérales, vasculaires, neurologiques, glandulaires et somato-émotionnelles.</p>
+                <p>L'ostéopathie peut se pratiquer à tous les âges.</p>
+            </div>
+        </section>
 
-    <!-- Section avec les 7 text en accordeon pour comprendre le système de l'ostéopathie -->
-        
+        <!-- Section avec les 7 text en accordeon pour comprendre le système de l'ostéopathie -->
+        <section class="textReduce">
+            <div>
+                <h2>Les différents systèmes concernés :</h2>
+            </div>
+            <div>
+                <TextReduce 
+                />
+            </div>
+        </section>
 
-    <!-- Section modal pour savoir quand il faut aller consulter -->
-    <section class="quandConsulter">
-        <Modal 
-        title1=""
-        title2=""
-        title3=""
-        title4=""
-        title5=""
-        title6=""
-        title7=""
-        />
-    </section>
+        <!-- Section modal pour savoir quand il faut aller consulter -->
+        <section class="quandConsulter">
+            <Modal 
+            
+            />
+        </section>
 
-    <!-- Section les différents types d'ostéopathie pratiqué -->
-    <section class="typeOsteopathie">
+        <!-- Section les différents types d'ostéopathie pratiqué -->
+        <section class="typeOsteopathie">
 
-    </section>
+        </section>
 
-    <!-- Section C'est normal les craquements -->
-    <section class="craquementOsteopathie">
-        <div>
-            <h2></h2>
-        </div>
-        <div>
-            <p></p>
-            <p></p>
-        </div>
-    </section>
+        <!-- Section C'est normal les craquements -->
+        <section class="craquementOsteopathie">
+            <div>
+                <h2></h2>
+            </div>
+            <div>
+                <p></p>
+                <p></p>
+            </div>
+        </section>
+    </div>
 </BaseLayout>
 
 <style lang="scss">
