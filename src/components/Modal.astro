@@ -13,38 +13,51 @@ const { title1, title2, title3, title4, title5, title6 } = Astro.props;
 
 <section class="vosPracticiens">
     <div class="containerCardPracticiens">
-        <div class="containerCardPracticiens1">
-                <div class="blocBlurCard">
-                    <h3>{title1}</h3>
-                </div>
-        </div>	
-        <div class="containerCardPracticiens2">
-                <div class="blocBlurCard">
-                    <h3>{title2}</h3>
-                </div>
-        </div>	
-        <div class="containerCardPracticiens3">
-                <div class="blocBlurCard">
-                    <h3>{title3}</h3>
-                </div>
-        </div>	
+		<button>
+			<div class="containerCardPracticiens1">
+					<div class="blocBlurCard">
+						<h3>{title1}</h3>
+					</div>
+			</div>	
+		</button>
+		
+		<button>
+			<div class="containerCardPracticiens2">
+					<div class="blocBlurCard">
+						<h3>{title2}</h3>
+					</div>
+			</div>
+		</button>	
+		<button>
+			<div class="containerCardPracticiens3">
+					<div class="blocBlurCard">
+						<h3>{title3}</h3>
+					</div>
+			</div>	
+		</button>
     </div>
     <div class="containerCardPracticiens">
-        <div class="containerCardPracticiens4">
-                <div class="blocBlurCard">
-                    <h3>{title4}</h3>
-                </div>
-        </div>	
-        <div class="containerCardPracticiens5">
-                <div class="blocBlurCard">
-                    <h3>{title5}</h3>
-                </div>
-        </div>	
-        <div class="containerCardPracticiens6">
-                <div class="blocBlurCard">
-                    <h3>{title6}</h3>
-                </div>
-        </div>	
+		<button>
+			<div class="containerCardPracticiens4">
+					<div class="blocBlurCard">
+						<h3>{title4}</h3>
+					</div>
+			</div>	
+		</button>
+		<button>
+			<div class="containerCardPracticiens5">
+					<div class="blocBlurCard">
+						<h3>{title5}</h3>
+					</div>
+			</div>	
+		</button>
+		<button>
+			<div class="containerCardPracticiens6">
+					<div class="blocBlurCard">
+						<h3>{title6}</h3>
+					</div>
+			</div>	
+		</button>
     </div>
 </section>
 
@@ -64,6 +77,11 @@ const { title1, title2, title3, title4, title5, title6 } = Astro.props;
 				align-items: center;
 				flex-wrap: wrap;
 				gap: 64px;	
+			}
+			button{
+				border: 0;
+				background-color: transparent;
+				cursor: pointer;
 			}
 			.containerCardPracticiens1{
 				display: flex;
