@@ -1,21 +1,5 @@
 {
-  "name": "pierre_tourneux",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
   "dependencies": {
-    "@astrojs/check": "^0.8.2",
-    "astro": "^4.11.6",
-    "scss": "^0.2.4",
-    "typescript": "^5.5.3"
-  },
-  "devDependencies": {
-    "sass": "^1.77.8"
+    "svelte": "^5.1.6"
   }
 }
